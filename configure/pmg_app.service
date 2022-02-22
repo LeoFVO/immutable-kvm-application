@@ -1,0 +1,11 @@
+[Unit]
+Description=Basic java app
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/java -jar /usr/share/prometheus_metric_generator.jar
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
